@@ -1,6 +1,7 @@
 ##### [GET] API key
 
 ##### List of Users
+====================
 ```
 GET /users
 ```
