@@ -69,6 +69,27 @@ This endpoint will give access to json file with user info and list of user's po
 ```
 http://localhost:9393/users/:id/posts
 ```
+##### Example
+```
+[{
+  id: 8,
+  title: "magnam",
+  body: "Eius voluptas aut veritatis autem odio possimus voluptas. Explicabo odit minus consequuntur quia maxime sint id. Nihil earum aut itaque quidem. Amet ad eum aut.",
+  user_id: 3
+  },
+  {
+  id: 9,
+  title: "id",
+  body: "Voluptatum laboriosam aut. In dolorum iusto. Laborum qui reprehenderit. Corporis ex eos iure sunt vel perspiciatis. In fugiat placeat odio numquam.",
+  user_id: 3
+  },
+  {
+  id: 10,
+  title: "maiores",
+  body: "Vel exercitationem illum labore quis saepe in. Molestias voluptas eos ducimus error ut. Non fugit odio tempore sit mollitia quo sint.",
+  user_id: 3
+}]
+```
 
 ##### List of comments for a post by a user
 ```

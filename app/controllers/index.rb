@@ -15,7 +15,10 @@ get '/posts' do
   @posts.to_json
 end
 
-get '/' do
+# GET /users/1/posts
+get '/users/:id/posts' do
+  @posts = Post.where(:user_id => params[:id])
+  @posts.to_json
 end
 
 get '/' do
