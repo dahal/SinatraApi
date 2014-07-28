@@ -1,6 +1,6 @@
 [--][GET] API key
 
-###List of Users
+####List of Users
 ```
 GET /users
 ```
@@ -9,7 +9,15 @@ This endpoint will give access to json file with list of users.
 http://localhost:9393/users
 ```
 
-[GET] list of posts
+####List of Posts
+```
+GET /posts
+```
+This endpoint will give access to json file with list of posts.
+```
+http://localhost:9393/posts
+```
+
 
 [GET] list of posts for a user
 
