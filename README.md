@@ -13,22 +13,22 @@ http://localhost:9393/users
 ##### Example
 ```
 [{
-id: 1,
-username: "reynold_stamm",
-email: "laria.ziemann@walter.com",
-name: "Roberta Wilkinson I",
-bio: "Perferendis recusandae et qui. Alias culpa quod sapiente quisquam sit. Vel est inventore. Omnis eum exercitationem. Est dolorem consequatur distinctio."
-},
-{
-id: 2,
-username: "earnest",
-email: "ellis@townefeest.name",
-name: "Deshaun Skiles",
-bio: "Omnis ab voluptatem eum magni sit. Eum quia sapiente harum perspiciatis id. Error autem earum magnam vero eaque et. Delectus explicabo et quia debitis distinctio."
+  id: 1,
+  username: "reynold_stamm",
+  email: "laria.ziemann@walter.com",
+  name: "Roberta Wilkinson I",
+  bio: "Perferendis recusandae et qui. Alias culpa quod sapiente quisquam sit. Vel est inventore. Omnis eum exercitationem. Est dolorem consequatur distinctio."
+  },
+  {
+  id: 2,
+  username: "earnest",
+  email: "ellis@townefeest.name",
+  name: "Deshaun Skiles",
+  bio: "Omnis ab voluptatem eum magni sit. Eum quia sapiente harum perspiciatis id. Error autem earum magnam vero eaque et. Delectus explicabo et quia debitis distinctio."
 }]
 
 ```
-
+==================================
 ##### List of Posts
 ```
 GET /posts
@@ -36,6 +36,28 @@ GET /posts
 This endpoint will give access to json file with list of posts.
 ```
 http://localhost:9393/posts
+```
+##### Example
+
+```
+  [{
+  id: 1,
+  title: "nam",
+  body: "Fuga non quasi quia. Molestiae voluptas esse eligendi commodi rerum error. Id id quibusdam soluta et quis aut. Minima unde error velit tempora eaque non. Animi eum sequi.",
+  user_id: 1
+  },
+  {
+  id: 2,
+  title: "repudiandae",
+  body: "Voluptatem quia nostrum et modi voluptatem ut. Incidunt consequuntur vitae minima. Voluptatem dicta et rerum in. Facilis praesentium inventore nulla cupiditate. Incidunt et id quam eum.",
+  user_id: 1
+  },
+  {
+  id: 3,
+  title: "sapiente",
+  body: "Ducimus temporibus iure. Omnis dignissimos ut qui. Minus quaerat accusamus eligendi dolores. Eos officia voluptas quis. Aperiam sit beatae et quasi iure fugiat ipsum.",
+  user_id: 1
+  }]
 ```
 
 ##### List of posts for a user

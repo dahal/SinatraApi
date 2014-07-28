@@ -9,7 +9,10 @@ get '/users' do
   @users.to_json
 end
 
-get '/' do
+# GET /posts
+get '/posts' do
+  @posts = Post.all
+  @posts.to_json
 end
 
 get '/' do
