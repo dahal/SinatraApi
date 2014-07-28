@@ -63,11 +63,11 @@ http://localhost:9393/posts
 ##### List of posts for a user
 
 ```
-GET /users/:id/posts
+GET /users/:user_id/posts
 ```
 This endpoint will give access to json file with user info and list of user's posts.
 ```
-http://localhost:9393/users/:id/posts
+http://localhost:9393/users/3/posts
 ```
 ##### Example
 ```json
@@ -93,12 +93,32 @@ http://localhost:9393/users/:id/posts
 
 ##### List of comments for a post by a user
 ```
-GET /users/:id/posts/:id/comments
+GET /users/:user_id/posts/:post_id/comments
 ```
 
-This endpoints will give access to json file comments on one post by one user.
+This endpoints will give access to json file with comments on specific post by the specific user.
 ```
-http://localhost:9393/users/:id/posts/:id/comments
+http://localhost:9393/users/1/posts/3/comments
+```
+```json
+[{
+  id: 7,
+  body: "Laboriosam est quis. Similique et distinctio nobis placeat explicabo doloremque voluptas. Nesciunt voluptatem vitae.",
+  post_id: 3,
+  user_id: 1
+  },
+  {
+  id: 8,
+  body: "Soluta placeat velit odit aut. Omnis ut veniam omnis ab. Est voluptatibus quis. Cupiditate in aut aperiam. Deserunt et accusantium.",
+  post_id: 3,
+  user_id: 1
+  },
+  {
+  id: 9,
+  body: "Explicabo sit ut vel et esse tenetur sit. Natus et eos nostrum velit omnis atque laborum. Distinctio sit aliquid minima vel eius quo est. A quae odit eum sunt. Excepturi nemo dicta sint nulla.",
+  post_id: 3,
+  user_id: 1
+}]
 ```
 
 ##### Create a new post by a user

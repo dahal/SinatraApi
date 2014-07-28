@@ -16,10 +16,14 @@ get '/posts' do
 end
 
 # GET /users/1/posts
-get '/users/:id/posts' do
-  @posts = Post.where(:user_id => params[:id])
+get '/users/:user_id/posts' do
+  @posts = Post.where(:user_id => params[:user_id])
   @posts.to_json
 end
 
-get '/' do
+get '/users/:user_id/posts/:post_id/comments' do
+  #@posts = Post.where(:user_id => params[:user_id], :id => params[:post_id])
+  @comments = Comment.where(:post_id => params[:post_id], :user_id => params[:user_id])
+  @comments.to_json
+
 end
