@@ -1,4 +1,4 @@
-##### [GET] API key
+##### Create an API key
 ```
 POST /keys?
 ```
