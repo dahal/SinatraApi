@@ -9,10 +9,9 @@ This endpoint will give access to json file with list of users.
 http://localhost:9393/users
 ```
 
-** Example **
+##### Example
 ```
-[
-{
+[{
 id: 1,
 username: "reynold_stamm",
 email: "laria.ziemann@walter.com",
@@ -25,8 +24,7 @@ username: "earnest",
 email: "ellis@townefeest.name",
 name: "Deshaun Skiles",
 bio: "Omnis ab voluptatem eum magni sit. Eum quia sapiente harum perspiciatis id. Error autem earum magnam vero eaque et. Delectus explicabo et quia debitis distinctio."
-}
-]
+}]
 
 ```
 
