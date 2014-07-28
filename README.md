@@ -143,14 +143,18 @@ http://localhost:9393/posts?
 ==================================
 ##### Create a new comment for a post by a user
 ```
-POST /posts/2/comments/new
+POST /posts/comments
+POST Data
+-----------------
+body=This+is+a+comment&post_id=2&user_id=3"
 ```
+
 This endpoint will give access to send a POST request to create the new comment on the post.
 
+```
+http://localhost:9393/posts/comments?
+```
 ##### Example
 ```json
-Example here
-```
-```
-http://localhost:9393/posts/2/comments/new
+~> curl -X POST "http://localhost:9393/posts/comments?body=This+is+a+comment&post_id=2&user_id=3"
 ```

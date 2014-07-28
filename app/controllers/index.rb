@@ -42,7 +42,13 @@ post '/posts' do
 end
 
 
-# POST /posts/2/comments/new
-post '/posts/:post_id/comments/new' do
-
+# POST /posts/2/comments
+post '/posts/comments' do
+  p params
+  @comment = Comment.new(params)
+  if @comment.save
+    "Comment successfully posted!"
+  else
+    "Something went wrong!"
+  end
 end
