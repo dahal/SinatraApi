@@ -21,9 +21,28 @@ get '/users/:user_id/posts' do
   @posts.to_json
 end
 
+# GET /users/1/posts/3/comments
 get '/users/:user_id/posts/:post_id/comments' do
-  #@posts = Post.where(:user_id => params[:user_id], :id => params[:post_id])
   @comments = Comment.where(:post_id => params[:post_id], :user_id => params[:user_id])
   @comments.to_json
+
+end
+
+# POST /posts/new
+post '/posts' do
+  #content_type :to_json
+  @post = Post.new(params)
+  if @post.save
+    #status 200
+    "Successful"
+  else
+    "Something went Wrong!"
+    #halt 500
+  end
+end
+
+
+# POST /posts/2/comments/new
+post '/posts/:post_id/comments/new' do
 
 end

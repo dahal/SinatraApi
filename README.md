@@ -59,7 +59,7 @@ http://localhost:9393/posts
   user_id: 1
 }]
 ```
-
+==================================
 ##### List of posts for a user
 
 ```
@@ -70,6 +70,7 @@ This endpoint will give access to json file with user info and list of user's po
 http://localhost:9393/users/3/posts
 ```
 ##### Example
+
 ```json
 [{
   id: 8,
@@ -89,7 +90,10 @@ http://localhost:9393/users/3/posts
   body: "Vel exercitationem illum labore quis saepe in. Molestias voluptas eos ducimus error ut. Non fugit odio tempore sit mollitia quo sint.",
   user_id: 3
 }]
+
 ```
+
+==================================
 
 ##### List of comments for a post by a user
 ```
@@ -120,13 +124,33 @@ http://localhost:9393/users/1/posts/3/comments
   user_id: 1
 }]
 ```
+==================================
 
 ##### Create a new post by a user
 ```
-POST/
+POST /posts
+POST Data
+title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1
 ```
-
+This endpoint will give access to send a POST request to create new posts.
+```
+http://localhost:9393/posts?
+```
+##### Example
+```ruby
+~> curl -X POST "http://localhost:9393/posts?title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1"
+```
+==================================
 ##### Create a new comment for a post by a user
 ```
-POST/
+POST /posts/2/comments/new
+```
+This endpoint will give access to send a POST request to create the new comment on the post.
+
+##### Example
+```json
+Example here
+```
+```
+http://localhost:9393/posts/2/comments/new
 ```
