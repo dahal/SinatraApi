@@ -1,7 +1,18 @@
 ##### [GET] API key
+```
+POST /keys?
+```
 
-##### List of Users
+This endpoint will generate an API key.
+
+##### Example
+```ruby
+~> curl -X POST "http://localhost:9393/keys?"
+Your API Key is: aa55c5fca4b3299990c3335194d4d38b
+```
+
 ====================
+##### List of Users
 ```
 GET /users
 ```

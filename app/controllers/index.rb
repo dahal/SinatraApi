@@ -52,3 +52,14 @@ post '/posts/comments' do
     "Something went wrong!"
   end
 end
+
+#-------------------------------------#
+post '/keys' do
+  @key = Apikey.new(key: SecureRandom.hex)
+  if @key.save
+    "Your API Key is: #{@key[:key]}"
+  else
+    "Something went wrong!"
+  end
+
+end
