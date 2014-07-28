@@ -1,6 +1,6 @@
 [--][GET] API key
 
-[X] List of Users
+###List of Users
 ```
 GET /users
 ```
