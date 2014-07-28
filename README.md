@@ -40,7 +40,7 @@ http://localhost:9393/posts
 ##### Example
 
 ```
-  [{
+[{
   id: 1,
   title: "nam",
   body: "Fuga non quasi quia. Molestiae voluptas esse eligendi commodi rerum error. Id id quibusdam soluta et quis aut. Minima unde error velit tempora eaque non. Animi eum sequi.",
@@ -57,7 +57,7 @@ http://localhost:9393/posts
   title: "sapiente",
   body: "Ducimus temporibus iure. Omnis dignissimos ut qui. Minus quaerat accusamus eligendi dolores. Eos officia voluptas quis. Aperiam sit beatae et quasi iure fugiat ipsum.",
   user_id: 1
-  }]
+}]
 ```
 
 ##### List of posts for a user
