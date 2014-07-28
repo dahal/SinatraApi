@@ -30,7 +30,12 @@ http://localhost:9393/users/:id/posts
 
 #### List of comments for a post by a user
 ```
-GET/
+GET /users/:id/posts/:id/comments
+```
+
+This endpoints will give access to json file comments on one post by one user.
+```
+http://localhost:9393/users/:id/posts/:id/comments
 ```
 
 #### Create a new post by a user
