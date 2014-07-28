@@ -130,6 +130,7 @@ http://localhost:9393/users/1/posts/3/comments
 ```
 POST /posts
 POST Data
+--------------------------
 title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1
 ```
 This endpoint will give access to send a POST request to create new posts.
@@ -145,7 +146,7 @@ http://localhost:9393/posts?
 ```
 POST /posts/comments
 POST Data
------------------
+--------------------------
 body=This+is+a+comment&post_id=2&user_id=3"
 ```
 
