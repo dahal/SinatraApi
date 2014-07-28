@@ -11,7 +11,7 @@ http://localhost:9393/users
 ```
 
 ##### Example
-```
+```json
 [{
   id: 1,
   username: "reynold_stamm",
@@ -39,7 +39,7 @@ http://localhost:9393/posts
 ```
 ##### Example
 
-```
+```json
 [{
   id: 1,
   title: "nam",
@@ -70,7 +70,7 @@ This endpoint will give access to json file with user info and list of user's po
 http://localhost:9393/users/:id/posts
 ```
 ##### Example
-```
+```json
 [{
   id: 8,
   title: "magnam",
