@@ -55,11 +55,11 @@ end
 
 #-------------------------------------#
 post '/keys' do
-  @key = Apikey.new(key: SecureRandom.hex)
-  if @key.save
-    "Your API Key is: #{@key[:key]}"
-  else
-    "Something went wrong!"
+  @api = Apikey.find_by_user_id(params[:user_id])
+  if @api == nil
+    @api = Apikey.create(key: SecureRandom.hex, user_id: params[:user_id])
   end
-
+   "Your API Key is: #{@api[:key]}"
 end
+
+

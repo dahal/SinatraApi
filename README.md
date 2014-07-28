@@ -7,8 +7,8 @@ This endpoint will generate an API key.
 
 ##### Example
 ```ruby
-~> curl -X POST "http://localhost:9393/keys?"
-Your API Key is: aa55c5fca4b3299990c3335194d4d38b
+~> curl -X POST "http://localhost:9393/keys?user_id=2"
+Your API Key is: 26f7c8ce1b09eb65d8e0283e1091fb4f
 ```
 
 ====================
