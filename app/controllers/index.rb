@@ -1,3 +1,11 @@
+post '/keys' do
+  @api = Apikey.find_by_user_id(params[:user_id])
+  if @api == nil
+    @api = Apikey.create(key: SecureRandom.hex, user_id: params[:user_id])
+  end
+   "Your API Key is: #{@api[:key]}"
+end
+
 get '/' do
   # Look in app/views/index.erb
   erb :index
@@ -28,35 +36,32 @@ get '/users/:user_id/posts/:post_id/comments' do
 
 end
 
-# POST /posts/new
+# POST /posts
 post '/posts' do
-  @post = Post.new(params)
-  if @post.save
-    "Successful"
+  apikey = params[:apikey]
+  if Apikey.exists?(key:apikey)
+    valid_params = {title:params[:title], body:params[:body], user_id:params[:user_id]}
+    Post.create(valid_params)
+      "Successful"
   else
-    "Something went Wrong!"
-    #halt 500
+    "Something went wrong, could be API key? Maybe???"
+      #halt 500
   end
 end
 
 
 # POST /posts/2/comments
 post '/posts/comments' do
-  @comment = Comment.new(params)
-  if @comment.save
+  apikey = params[:apikey]
+  if Apikey.exists?(key:apikey)
+    valid_params = {body:params[:body], post_id:params[:post_id], user_id:params[:user_id]}
+    Comment.create(valid_params)
     "Comment successfully posted!"
   else
     "Something went wrong!"
   end
 end
 
-#-------------------------------------#
-post '/keys' do
-  @api = Apikey.find_by_user_id(params[:user_id])
-  if @api == nil
-    @api = Apikey.create(key: SecureRandom.hex, user_id: params[:user_id])
-  end
-   "Your API Key is: #{@api[:key]}"
-end
+
 
 

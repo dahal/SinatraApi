@@ -145,7 +145,7 @@ http://localhost:9393/users/1/posts/3/comments
 POST /posts
 POST Data
 --------------------------
-title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1
+title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1&apikey=43351aba1f8de438846a37e3e4cc42b2
 ```
 This endpoint will give access to send a POST request to create new posts.
 ```
@@ -153,7 +153,7 @@ http://localhost:9393/posts?
 ```
 ##### Example
 ```ruby
-~> curl -X POST "http://localhost:9393/posts?title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1"
+~> curl -X POST "http://localhost:9393/posts?title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1&apikey=43351aba1f8de438846a37e3e4cc42b2"
 ```
 ==================================
 ##### Create a new comment for a post by a user
@@ -161,7 +161,7 @@ http://localhost:9393/posts?
 POST /posts/comments
 POST Data
 --------------------------
-body=This+is+a+comment&post_id=2&user_id=3"
+body=This+is+a+comment&post_id=2&user_id=3&apikey=751e5fb79060444e11883036195d7b84"
 ```
 
 This endpoint will give access to send a POST request to create the new comment on the post.
@@ -171,5 +171,5 @@ http://localhost:9393/posts/comments?
 ```
 ##### Example
 ```json
-~> curl -X POST "http://localhost:9393/posts/comments?body=This+is+a+comment&post_id=2&user_id=3"
+~> curl -X POST "http://localhost:9393/posts/comments?body=This+is+a+comment&post_id=2&user_id=3&apikey=751e5fb79060444e11883036195d7b84"
 ```
