@@ -18,7 +18,7 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'json'
-gem 'factory_girl'
+gem 'faker'
 
 group :test do
   gem 'shoulda-matchers'
@@ -28,5 +28,5 @@ group :test do
 end
 
 group :test, :development do
-  gem 'faker'
+	gem 'factory_girl'
 end
