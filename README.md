@@ -12,6 +12,7 @@ Your API Key is: 26f7c8ce1b09eb65d8e0283e1091fb4f
 ```
 
 ====================
+## GET Requests
 ##### List of Users
 ```
 GET /users
@@ -136,6 +137,8 @@ http://localhost:9393/users/1/posts/3/comments
 }]
 ```
 ==================================
+
+## POST Requests
 
 ##### Create a new post by a user
 ```

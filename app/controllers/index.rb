@@ -30,10 +30,8 @@ end
 
 # POST /posts/new
 post '/posts' do
-  #content_type :to_json
   @post = Post.new(params)
   if @post.save
-    #status 200
     "Successful"
   else
     "Something went Wrong!"
@@ -44,7 +42,6 @@ end
 
 # POST /posts/2/comments
 post '/posts/comments' do
-  p params
   @comment = Comment.new(params)
   if @comment.save
     "Comment successfully posted!"
