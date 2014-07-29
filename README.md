@@ -7,7 +7,7 @@ This endpoint will generate an API key.
 
 ##### Example
 ```ruby
-~> curl -X POST "http://localhost:9393/keys?user_id=2"
+~> curl -X POST "http://ourtestapi.herokuapp.com/keys?user_id=2"
 Your API Key is: 26f7c8ce1b09eb65d8e0283e1091fb4f
 ```
 
@@ -19,7 +19,7 @@ GET /users
 ```
 This endpoint will give access to json file with list of users.
 ```
-http://localhost:9393/users
+http://ourtestapi.herokuapp.com/users
 ```
 
 ##### Example
@@ -47,7 +47,7 @@ GET /posts
 ```
 This endpoint will give access to json file with list of posts.
 ```
-http://localhost:9393/posts
+http://ourtestapi.herokuapp.com/posts
 ```
 ##### Example
 
@@ -79,7 +79,7 @@ GET /users/:user_id/posts
 ```
 This endpoint will give access to json file with user info and list of user's posts.
 ```
-http://localhost:9393/users/3/posts
+http://ourtestapi.herokuapp.com/users/3/posts
 ```
 ##### Example
 
@@ -114,7 +114,7 @@ GET /users/:user_id/posts/:post_id/comments
 
 This endpoints will give access to json file with comments on specific post by the specific user.
 ```
-http://localhost:9393/users/1/posts/3/comments
+http://ourtestapi.herokuapp.com/users/1/posts/3/comments
 ```
 ```json
 [{
@@ -149,11 +149,11 @@ title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1&
 ```
 This endpoint will give access to send a POST request to create new posts.
 ```
-http://localhost:9393/posts?
+http://ourtestapi.herokuapp.com/posts?
 ```
 ##### Example
 ```ruby
-~> curl -X POST "http://localhost:9393/posts?title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1&apikey=43351aba1f8de438846a37e3e4cc42b2"
+~> curl -X POST "http://ourtestapi.herokuapp.com/posts?title=This+is+the+title+of+the+post&body=This+is+the+body+of+the+post&user_id=1&apikey=43351aba1f8de438846a37e3e4cc42b2"
 ```
 ==================================
 ##### Create a new comment for a post by a user
@@ -167,9 +167,9 @@ body=This+is+a+comment&post_id=2&user_id=3&apikey=751e5fb79060444e11883036195d7b
 This endpoint will give access to send a POST request to create the new comment on the post.
 
 ```
-http://localhost:9393/posts/comments?
+http://ourtestapi.herokuapp.com/posts/comments?
 ```
 ##### Example
 ```json
-~> curl -X POST "http://localhost:9393/posts/comments?body=This+is+a+comment&post_id=2&user_id=3&apikey=751e5fb79060444e11883036195d7b84"
+~> curl -X POST "http://ourtestapi.herokuapp.com/posts/comments?body=This+is+a+comment&post_id=2&user_id=3&apikey=751e5fb79060444e11883036195d7b84"
 ```
